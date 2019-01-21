@@ -42,4 +42,9 @@ def all_grid_neighbours(grid):
         neighbours[position] = [p for p in position_neighbours if p in grid]
     return neighbours
     
+def path_to_word(grid, path):
+    """
+    add all letters in path to string
+    """
+    return ''.join([grid[p]for p in path])
         
