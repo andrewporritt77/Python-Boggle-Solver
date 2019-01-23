@@ -77,11 +77,17 @@ def get_dictionary(dictionary_file):
     with open(dictionary_file) as f:
         return [w.strip().upper() for w in f]
         
+def display_words(words):
+    for word in words:
+        print(word)
+    print ("found %s words" % len(words))
+    
+        
 def main():
     """
     full program/app
     """
-    grid = make_grid(3,3)
+    grid = make_grid(2, 2)
     dictionary = get_dictionary('words.txt')
     words = search(grid, dictionary)
     for word in words:
